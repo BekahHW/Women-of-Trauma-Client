@@ -18,7 +18,7 @@ trauma_id: 1,
 user_id: 2}
 ]
 
-
+const API_URL = process.env.REACT_APP_API_URL;
 class App extends Component {
 
   constructor(props) {
@@ -30,7 +30,7 @@ class App extends Component {
   }
 
   componentDidMount() {
-    fetch('http://localhost:3001/api/disorders')
+    fetch(`${API_URL}/disorders`)
 
     .then(response => response.json())
     .then(disorders => this.setState( { disorders }))
