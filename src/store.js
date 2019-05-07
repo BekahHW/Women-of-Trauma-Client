@@ -10,7 +10,8 @@ import narratives from './reducers/narratives'
 import disorders from './reducers/disorders'
 
 const reducers = combineReducers({
-  narratives: narratives
+  narratives,
+  disorders
 });
 
 const middleware = [thunk];
