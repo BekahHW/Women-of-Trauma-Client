@@ -38,7 +38,6 @@ class App extends Component {
   }
 
   render() {
-    console.log(this.state)
     return (
       <div className="App">
       <h1>Hello. This is the container.</h1>

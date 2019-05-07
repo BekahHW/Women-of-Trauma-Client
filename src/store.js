@@ -6,17 +6,17 @@ import {
 } from 'redux';
 import thunk from 'redux-thunk'
 
-const narrativesReducer = (state= [], action) => {
+const narratives = (state= [], action) => {
   switch(action.type) {
     case 'GET_DISORDERS_SUCCESS':
-      return action.disorders;
+      return action.narratives;
 
       default: return state;
   }
 }
 
 const reducers = combineReducers({
-  narratives: narrativesReducer
+  narratives: narratives
 });
 
 const middleware = [thunk];
