@@ -2,6 +2,9 @@ import React, { Component} from 'react';
 import './App.css'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
+import { getDisorders} from '../actions/disorders'
+import { getNarratives} from '../actions/narratives'
+
 
 
 const narratives = [
@@ -24,9 +27,7 @@ class App extends Component {
 
   componentDidMount() {
     fetch(`${API_URL}/disorders`)
-
     .then(response => response.json())
-
   }
 
   render() {
