@@ -1,20 +1,10 @@
 import React from 'react';
 
-const Narratives = (props) => (
-<div>
+const Narratives = (narratives) => (
+  <div>
       <h1>Narratives</h1>
-
-      {props.narratives.map(narrative =>
-        <div className="NarrativesCard">
-
-        <h2>{narrative.title}</h2>
-        <h3>{narrative.tagline}</h3>
-
-        </div>
-
-
-      )}
-      </div>
+      {props.narratives.map(narrative => <NarrativeCard key={narrative.id} narrative={narrative} />)}
+    </div>
 )
 
 export default Narratives

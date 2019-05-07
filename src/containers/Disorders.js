@@ -5,7 +5,7 @@ const Disorders = (props) => (
 
       <div className="App-header">
       <h1>Disorders</h1>
-      {props.disorders.map(disorder => < DisorderCard disorder={disorder} />
+      {props.disorders.map(disorder => < DisorderCard key={disorder.id} disorder={disorder} />
       )}
       </div>
 )
