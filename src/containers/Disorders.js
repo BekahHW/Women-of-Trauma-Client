@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DisorderCard from '../components/DisorderCard'
+import { getDisorders} from '../actions/disorders'
 
 class Disorders extends Component {
 
   componentDidMount(){
-  
+
   }
 
   render(){
@@ -24,4 +25,4 @@ const mapStateToProps = (state) => {
     disorders: state.disorders
   })
 }
-export default connect(mapStateToProps)(Disorders)
+export default connect(mapStateToProps, { getDisorders })(Disorders)

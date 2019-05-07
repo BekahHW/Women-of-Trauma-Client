@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import { connect } from 'react-redux'
 import NarrativeCard from '../components/NarrativeCard'
 import NarrativeForm from './NarrativeForm'
+import { getNarratives} from '../actions/narratives'
 import './App.css'
 
 class Narratives extends Component{

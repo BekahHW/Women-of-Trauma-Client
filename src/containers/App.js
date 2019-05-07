@@ -2,8 +2,6 @@ import React, { Component} from 'react';
 import './App.css'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
-import { getDisorders} from '../actions/disorders'
-import { getNarratives} from '../actions/narratives'
 
 
 
@@ -21,13 +19,10 @@ trauma_id: 1,
 user_id: 2}
 ]
 
-const API_URL = process.env.REACT_APP_API_URL;
-
 class App extends Component {
 
   componentDidMount() {
-    fetch(`${API_URL}/disorders`)
-    .then(response => response.json())
+
   }
 
   render() {
