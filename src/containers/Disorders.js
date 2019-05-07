@@ -5,10 +5,7 @@ import DisorderCard from '../components/DisorderCard'
 class Disorders extends Component {
 
   componentDidMount(){
-    this.props.dispatch({
-      type: 'GET_DISORDERS_SUCCESS',
-      disorders: [{}]
-    })
+  
   }
 
   render(){
