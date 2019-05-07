@@ -16,7 +16,7 @@ const narratives = (state= [], action) => {
 }
 
 const reducers = combineReducers({
-  narratives: narratives
+  narratives: narratives 
 });
 
 const middleware = [thunk];
