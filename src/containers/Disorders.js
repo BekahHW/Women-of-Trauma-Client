@@ -6,7 +6,7 @@ import { getDisorders} from '../actions/disorders'
 class Disorders extends Component {
 
   componentDidMount(){
-    this.props.getDisorders
+    this.props.getDisorders()
   }
 
   render(){

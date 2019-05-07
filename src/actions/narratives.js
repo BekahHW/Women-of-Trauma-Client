@@ -8,7 +8,7 @@ const setNarratives = narratives => {
 }
 
 
-const getNarratives = () => {
+export const getNarratives = () => {
   dispatch => {
     return fetch(`${API_URL}/narratives`)
     .then(response => response.json())
