@@ -21,19 +21,11 @@ user_id: 2}
 const API_URL = process.env.REACT_APP_API_URL;
 class App extends Component {
 
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      disorders: []
-    }
-  }
-
   componentDidMount() {
     fetch(`${API_URL}/disorders`)
 
     .then(response => response.json())
-    .then(disorders => this.setState( { disorders }))
+    // .then(disorders => this.setState( { disorders }))
 
   }
 
@@ -41,8 +33,8 @@ class App extends Component {
     return (
       <div className="App">
       <h1>Hello. This is the container.</h1>
-      <Disorders disorders={ this.state.disorders }/>
-      <Narratives narratives={ narratives }/>
+      <Disorders />
+      <Narratives />
 
       </div>
     )

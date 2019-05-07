@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import { connect } from 'react-redux'
 import NarrativeCard from '../components/NarrativeCard'
 import NarrativeForm from './NarrativeForm'
 import './App.css'
