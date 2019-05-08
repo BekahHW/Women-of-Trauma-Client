@@ -57,4 +57,4 @@ const mapStateToProps = (state) => {
     narrativeFormData: state.narrativeFormData
   })
 }
-export default connect(mapStateToProps)(NarrativeForm)
+export default connect(mapStateToProps, { updateNarrativeFormData })(NarrativeForm)
