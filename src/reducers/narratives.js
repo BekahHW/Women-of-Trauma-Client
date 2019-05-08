@@ -1,4 +1,4 @@
-export default narratives = (state= [], action) => {
+export default (state= [], action) => {
   switch(action.type) {
     case 'GET_NARRATIVES_SUCCESS':
       return action.narratives;

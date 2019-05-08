@@ -9,7 +9,7 @@ const setNarratives = narratives => {
 
 
 export const getNarratives = () => {
-  dispatch => {
+  return dispatch => {
     return fetch(`${API_URL}/narratives`)
     .then(response => response.json())
     .then(disorders => dispatch(setNarratives))

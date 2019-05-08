@@ -2,10 +2,10 @@
 const API_URL = process.env.REACT_APP_API_URL;
 
 export const getDisorders = () => {
-  dispatch => {
+  return dispatch => {
     return fetch(`${API_URL}/disorders`)
     .then(response => response.json())
-    .then(disorders => dispatch(setDisorders))
+    .then(disorders => dispatch(getDisorders))
     .catch(error => console.log(error))
   }
 }
