@@ -8,10 +8,12 @@ import thunk from 'redux-thunk'
 
 import narratives from './reducers/narratives'
 import disorders from './reducers/disorders'
+import narrativeFormData from './reducers/narrativeFormData'
 
 const reducers = combineReducers({
   narratives,
-  disorders
+  disorders,
+  narrativeFormData
 });
 
 const middleware = [thunk];
