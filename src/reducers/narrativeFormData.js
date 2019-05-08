@@ -1,12 +1,12 @@
 export default(state= {
-  title = '',
-  tagline = '',
-  story = '',
+  title: '',
+  tagline: '',
+  story: '',
 }, action) => {
-   switch(action.type) => {
+   switch(action.type) {
      case 'UPDATED_DATA':
-      return narrative.narrativeFormData
+      return action.narrativeFormData
 
-      default: return state;
+      default: return state
    }
 }
