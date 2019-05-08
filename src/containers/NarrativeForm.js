@@ -11,14 +11,19 @@ class NarrativeForm extends Component {
     })
     this.props.updateNarrativeFormData(currentNarrativeFormData)
   }
+
+  handleOnSubmit = event => {
+    event.preventDefault()
+    this.props.createNarrative(this.props.narrativeFormData)
+  }
   render () {
     const {title, tagline, story} = this.props.narrativeFormData
     return (
       <div>
       Add Your Story
-      <form>
+      <form onSubmit= {this.handleOnSubmit}>
         <div>
-          <label htmlForm="title">Title</label>
+          <label htmlform="title">Title</label>
           <input
             type="text"
             onChange = {this.handleOnChange}
@@ -27,7 +32,7 @@ class NarrativeForm extends Component {
             />
           </div>
           <div>
-            <label htmlForm="tagline">Tagline</label>
+            <label htmlform="tagline">Tagline</label>
             <input
               type="text"
               onChange = {this.handleOnChange}
@@ -36,7 +41,7 @@ class NarrativeForm extends Component {
               />
             </div>
             <div>
-              <label htmlForm="story">Story</label>
+              <label htmlform="story">Story</label>
               <input
                 type="text"
                   onChange = {this.handleOnChange}
@@ -44,7 +49,7 @@ class NarrativeForm extends Component {
                 value={story}
                 />
             </div>
-
+            <button type="submit">Add Story</button>
       </form>
       </div>
     )
