@@ -1,6 +1,8 @@
 import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {updateNarrativeFormData} from '../actions/narrativeForm'
+import {createNarrative} from '../actions/narratives'
+
 
 class NarrativeForm extends Component {
 
