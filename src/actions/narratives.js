@@ -12,7 +12,7 @@ export const getNarratives = () => {
   return dispatch => {
     return fetch(`${API_URL}/narratives`)
     .then(response => response.json())
-    .then(narratives => dispatch(setNarratives()))
+    .then(narratives => dispatch(setNarratives(narratives)))
     .catch(error => console.log(error))
   }
 }

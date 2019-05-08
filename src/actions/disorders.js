@@ -12,7 +12,7 @@ export const getDisorders = () => {
   return dispatch => {
     return fetch(`${API_URL}/disorders`)
     .then(response => response.json())
-    .then(disorders => dispatch(setDisorders()))
+    .then(disorders => dispatch(setDisorders(disorders)))
     .catch(error => console.log(error))
   }
 }
