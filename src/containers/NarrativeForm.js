@@ -19,7 +19,7 @@ class NarrativeForm extends Component {
     this.props.createNarrative(this.props.narrativeFormData)
   }
   render () {
-    const {title, tagline, story} = this.props.narrativeFormData
+    const {title, tagline, story, user_id, trauma_id} = this.props.narrativeFormData
     return (
       <div>
       Add Your Story
@@ -27,7 +27,7 @@ class NarrativeForm extends Component {
         <div>
           <label htmlform="title">Title</label>
           <input
-            type="text"
+            type="string"
             onChange = {this.handleOnChange}
             name="title"
             value={title}
@@ -36,7 +36,7 @@ class NarrativeForm extends Component {
           <div>
             <label htmlform="tagline">Tagline</label>
             <input
-              type="text"
+              type="string"
               onChange = {this.handleOnChange}
               name="tagline"
               value={tagline}
@@ -51,6 +51,7 @@ class NarrativeForm extends Component {
                 value={story}
                 />
             </div>
+        
             <button type="submit">Add Story</button>
       </form>
       </div>
@@ -64,4 +65,6 @@ const mapStateToProps = (state) => {
     narrativeFormData: state.narrativeFormData
   })
 }
-export default connect(mapStateToProps, { updateNarrativeFormData })(NarrativeForm)
+export default connect(mapStateToProps,
+  { updateNarrativeFormData ,
+   createNarrative })(NarrativeForm)

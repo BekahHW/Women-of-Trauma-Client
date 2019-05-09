@@ -19,13 +19,13 @@ export const getNarratives = () => {
 
 export const createNarrative = narrative => {
   return dispatch  => {
-    return fetch(`${API_URL}/narratives`), {
+    return fetch(`${API_URL}/narratives`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json'
       },
-      data: JSON.stringify(narrative)
-    }
+      body: JSON.stringify({narrative: narrative})
+    })
     .then(response => response.json())
     .then(narrative => console.log(narrative))
     .catch(error => console.log(error))
