@@ -7,6 +7,13 @@ const setNarratives = narratives => {
   }
 }
 
+const addNarrative = narrative => {
+  return {
+    type: 'CREATE_NARRATIVES_SUCCESS',
+    narrative
+  }
+}
+
 
 export const getNarratives = () => {
   return dispatch => {
@@ -27,7 +34,7 @@ export const createNarrative = narrative => {
       body: JSON.stringify({narrative: narrative})
     })
     .then(response => response.json())
-    .then(narrative => console.log(narrative))
+    .then(narrative => dispatch(addNarrative(narrative)))
     .catch(error => console.log(error))
   }
 }
