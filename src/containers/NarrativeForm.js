@@ -52,6 +52,16 @@ class NarrativeForm extends Component {
                 value={story}
                 />
             </div>
+            <select value={this.props.value} onChange={this.handleChange}>
+               <option value="natural disasters">Natural Disasters</option>
+               <option value="traumatic loss">Traumatic Loss</option>
+               <option value="medical trauma">Medical Trauma</option>
+               <option value="school and community violence">"School and Community Violence</option>
+               <option value="war-related trauma">War-related Trauma</option>
+               <option value="sexual assault">Sexual Assault</option>
+               <option value="domestic violence">Domestic Violence</option>
+               <option value="child maltreatment">Child Maltreatment</option>
+             </select>
 
             <button type="submit">Add Story</button>
       </form>

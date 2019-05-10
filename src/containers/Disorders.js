@@ -6,14 +6,18 @@ import { getDisorders} from '../actions/disorders'
 class Disorders extends Component {
 
   componentDidMount(){
+
     this.props.getDisorders()
+
   }
 
   render(){
     return (
       <div className="App-header">
       <h1>Disorders</h1>
-      {this.props.disorders.map(disorder => < DisorderCard key={disorder.id} disorder={disorder} />
+
+      {this.props.disorders.map(disorder =>
+        < DisorderCard key={disorder.id} disorder={disorder} />
       )}
       </div>
     )

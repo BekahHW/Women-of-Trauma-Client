@@ -1,5 +1,7 @@
 import React, { Component} from 'react';
 import './App.css'
+import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import NavBar from '../components/NavBar'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
 
@@ -16,6 +18,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
+
+      <Router>
+      <React.Fragment>
+        <NavBar />
+        <Route exact path="/disorders" component={Disorders} />
+        <Route exact path="/narratives" component={Narratives} />
+              </React.Fragment>
+          </Router>
       <h1>Hello. This is the container.</h1>
       <Disorders />
       <Narratives />
