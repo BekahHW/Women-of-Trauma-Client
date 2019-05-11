@@ -2,6 +2,8 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {updateNarrativeFormData} from '../actions/narrativeForm'
 import {createNarrative} from '../actions/narratives'
+import Button from '@material-ui/core/Button';
+
 
 
 class NarrativeForm extends Component {
@@ -62,8 +64,9 @@ class NarrativeForm extends Component {
                <option value="domestic violence">Domestic Violence</option>
                <option value="child maltreatment">Child Maltreatment</option>
              </select>
-
-            <button type="submit">Add Story</button>
+             <Button variant="contained" color="primary">
+                  Add Story
+                </Button>
       </form>
       </div>
     )

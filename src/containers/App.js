@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
 import NavBar from '../components/NavBar'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
+import Welcome from '../components/Welcome'
 
 
 
@@ -24,8 +25,9 @@ class App extends Component {
         <NavBar />
         <Route exact path="/disorders" component={Disorders} />
         <Route exact path="/narratives" component={Narratives} />
-              </React.Fragment>
-          </Router>
+        </React.Fragment>
+        </Router>
+        <Welcome />  
       <h1>Hello. This is the container.</h1>
       <Disorders />
       <Narratives />
