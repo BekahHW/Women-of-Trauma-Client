@@ -13,38 +13,48 @@ import { NavLink } from 'react-router-dom';
 const styles = {
   root: {
     flexGrow: 1,
+
   },
   grow: {
     flexGrow: 1,
+    textAlign: "left"
   },
   menuButton: {
-    marginLeft: -12,
-    marginRight: 20,
+    color: "white",
   },
 };
-
 
 function NavBar(props) {
   const { classes } = props;
   return (
     <div className={classes.root}>
       <AppBar position="static">
-      <NavLink
-        to="/">Home</NavLink>
-        <NavLink
-          to="/disorders">Understanding Trauma</NavLink>
-          <NavLink
-            to="/narratives">Read Stories</NavLink>
-            <NavLink
-              to="/getHelp">Get Help</NavLink>
+        <Toolbar>
 
+          <Typography variant="h6" color="inherit" className={classes.grow}>
+            Women of Trauma
+          </Typography>
+          <NavLink
+            to="/"><Button className={classes.menuButton} color="inherit">Home</Button></NavLink>
+          <NavLink
+            to="/narratives"><Button className={classes.menuButton} color="inherit">Read Stories</Button></NavLink>
+          <NavLink
+            to="/getHelp"><Button className={classes.menuButton} color="inherit">Get Help</Button></NavLink>
+          <NavLink
+            to="/disorders"><Button className={classes.menuButton} color="inherit">Learn More</Button></NavLink>
+
+        </Toolbar>
       </AppBar>
     </div>
   );
 }
 
+
+
 NavBar.propTypes = {
   classes: PropTypes.object.isRequired,
 };
+
+
 
 export default withStyles(styles)(NavBar);
