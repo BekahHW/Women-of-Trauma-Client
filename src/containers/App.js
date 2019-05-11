@@ -27,10 +27,9 @@ class App extends Component {
         <Route exact path="/narratives" component={Narratives} />
         </React.Fragment>
         </Router>
-        <Welcome />  
+        <Welcome />
       <h1>Hello. This is the container.</h1>
-      <Disorders />
-      <Narratives />
+
 
       </div>
     )

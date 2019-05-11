@@ -23,6 +23,7 @@ const styles = {
   },
 };
 
+
 function NavBar(props) {
   const { classes } = props;
   return (
@@ -31,9 +32,11 @@ function NavBar(props) {
       <NavLink
         to="/">Home</NavLink>
         <NavLink
-          to="/disorders">Disorders</NavLink>
+          to="/disorders">Understanding Trauma</NavLink>
           <NavLink
-            to="/narratives">Narratives</NavLink>
+            to="/narratives">Read Stories</NavLink>
+            <NavLink
+              to="/getHelp">Get Help</NavLink>
 
       </AppBar>
     </div>
