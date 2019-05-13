@@ -2,11 +2,20 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {updateNarrativeFormData} from '../actions/narrativeForm'
 import {createNarrative} from '../actions/narratives'
+import {getDisorders} from '../actions/disorders'
 import Button from '@material-ui/core/Button';
+import Select from 'react-select';
+
 
 
 
 class NarrativeForm extends Component {
+
+  componentDidMount(){
+
+    this.props.getDisorders()
+
+  }
 
   handleOnChange = event => {
     const { name, value } = event.target
@@ -16,13 +25,17 @@ class NarrativeForm extends Component {
     this.props.updateNarrativeFormData(currentNarrativeFormData)
   }
 
+//   handleChange(selectedOption) {
+//     this.setState({selectedOption});
+// }
+
   handleOnSubmit = event => {
     event.preventDefault()
     this.props.createNarrative(this.props.narrativeFormData)
     .then(this.props.resetNarrativeForm)
   }
   render () {
-    const {title, tagline, story} = this.props.narrativeFormData
+    const {title, tagline, story, disorder} = this.props.narrativeFormData
     return (
       <div>
       Add Your Story
@@ -54,19 +67,24 @@ class NarrativeForm extends Component {
                 value={story}
                 />
             </div>
-            <select value={this.props.value} onChange={this.handleChange}>
-               <option value="natural disasters">Natural Disasters</option>
-               <option value="traumatic loss">Traumatic Loss</option>
-               <option value="medical trauma">Medical Trauma</option>
-               <option value="school and community violence">"School and Community Violence</option>
-               <option value="war-related trauma">War-related Trauma</option>
-               <option value="sexual assault">Sexual Assault</option>
-               <option value="domestic violence">Domestic Violence</option>
-               <option value="child maltreatment">Child Maltreatment</option>
-             </select>
+
+
+            <div>
+            <Select value={ disorder } onChange={this.handleOnChange}
+
+                 {...this.props.disorders.map(function (disorder) {
+                   return {
+                      value: disorder,
+                      name: disorder,
+                      disorder: disorder.name }
+                })
+              }
+                />
+                </div>
              <Button variant="contained" color="primary">
                   Add Story
                 </Button>
+
       </form>
       </div>
     )
@@ -74,11 +92,14 @@ class NarrativeForm extends Component {
 }
 
 
+
 const mapStateToProps = (state) => {
   return ({
-    narrativeFormData: state.narrativeFormData
+    narrativeFormData: state.narrativeFormData,
+    disorders: state.disorders
   })
 }
 export default connect(mapStateToProps,
-  { updateNarrativeFormData ,
-   createNarrative })(NarrativeForm)
+  { updateNarrativeFormData,
+   createNarrative,
+    getDisorders})(NarrativeForm)
