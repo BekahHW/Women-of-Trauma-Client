@@ -24,10 +24,10 @@ const styles = {
   },
 };
 
-function NavBar(props) {
-  const { classes } = props;
-  return (
-    <div className={classes.root}>
+const NavBar = (props) => {
+    const { classes } = props;
+
+    return <div className={classes.root}>
       <AppBar position="static">
         <Toolbar>
 
@@ -46,7 +46,6 @@ function NavBar(props) {
         </Toolbar>
       </AppBar>
     </div>
-  );
 }
 
 
