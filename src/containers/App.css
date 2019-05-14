@@ -38,10 +38,13 @@
 /* Banner */
 
 .banner {
-  width: "100%"; 
-  height: "30%"; 
-  margin: "auto"; 
-  padding: "50px" }
+  width: 100%;
+  height: 30vh;
+  margin: auto;
+  background-image: url('../images/photo.jpg');
+  background-color: #000000;
+}
+
 
 
 @keyframes App-logo-spin {
