@@ -1,5 +1,6 @@
 import React from 'react'
-import TextTruncate from 'react-text-truncate';
+import ReadMoreAndLess from 'react-read-more-less';
+
 
 
 const NarrativeCard = ({narrative}) => (
@@ -7,12 +8,16 @@ const NarrativeCard = ({narrative}) => (
       <h2>{narrative.title}</h2>
       <h3>{narrative.trauma}</h3>
       <h4>{narrative.tagline}</h4>
-      <TextTruncate
-          line={4}
-          truncateText="…"
-          text={narrative.story}
-          textTruncateChild={<a href="http://localhost:3000/narratives/{{narrative.id}}">Read on</a>}
-      />
+      <ReadMoreAndLess
+               // ref={ReadMore}
+               className="read-more-content"
+               charLimit={250}
+               readMoreText="Read more"
+               readLessText="Read less"
+           >
+               {narrative.story}
+           </ReadMoreAndLess>
+
     </div>
   )
 

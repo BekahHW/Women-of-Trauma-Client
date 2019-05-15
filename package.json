@@ -9,6 +9,7 @@
     "mdbreact": "^4.13.0",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
+    "react-read-more-less": "^0.1.6",
     "react-redux": "^7.0.3",
     "react-scripts": "3.0.0",
     "react-select": "^2.4.3",
