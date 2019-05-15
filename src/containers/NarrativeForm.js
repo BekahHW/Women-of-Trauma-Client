@@ -2,19 +2,12 @@ import React, {Component} from 'react'
 import { connect } from 'react-redux';
 import {updateNarrativeFormData} from '../actions/narrativeForm'
 import {createNarrative} from '../actions/narratives'
-import {getDisorders} from '../actions/disorders'
 import Button from '@material-ui/core/Button';
 
 
 
 
 class NarrativeForm extends Component {
-  //
-  // componentDidMount(){
-  //
-  //   this.props.getDisorders()
-  //
-  // }
 
   handleOnChange = event => {
     const { name, value } = event.target
@@ -102,10 +95,8 @@ class NarrativeForm extends Component {
 const mapStateToProps = (state) => {
   return ({
     narrativeFormData: state.narrativeFormData,
-    disorders: state.disorders
   })
 }
 export default connect(mapStateToProps,
   { updateNarrativeFormData,
-   createNarrative,
-    getDisorders})(NarrativeForm)
+   createNarrative})(NarrativeForm)
