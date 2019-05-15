@@ -2,7 +2,7 @@ export default(state= {
   title: '',
   tagline: '',
   story: '',
-  disorder: '',
+  trauma: '',
 }, action) => {
    switch(action.type) {
      case 'UPDATED_DATA':
