@@ -17,11 +17,13 @@ const styles = {
   },
   grow: {
     flexGrow: 1,
-    textAlign: "left"
+    textAlign: "left",
+    color: "white"
   },
   menuButton: {
     color: "white",
   },
+
 };
 
 const NavBar = (props) => {
@@ -31,11 +33,14 @@ const NavBar = (props) => {
       <AppBar position="static">
         <Toolbar>
 
-          <Typography variant="h6" color="inherit" className={classes.grow}>
+        <Typography
+         variant="h6" className={classes.grow}>
+         <NavLink style={{color: 'white', textDecoration: 'none'}}
+          to="/">
             Women of Trauma
+            </NavLink>
           </Typography>
-          <NavLink
-            to="/"><Button className={classes.menuButton} color="inherit">Home</Button></NavLink>
+          
           <NavLink
             to="/narratives"><Button className={classes.menuButton} color="inherit">Read Stories</Button></NavLink>
           <NavLink
