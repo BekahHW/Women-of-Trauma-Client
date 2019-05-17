@@ -1,12 +1,11 @@
 import React from 'react';
 import './App.css'
-import { BrowserRouter as Router, Route, NavLink } from 'react-router-dom';
+import { BrowserRouter as Router, Route } from 'react-router-dom';
 import NavBar from '../components/NavBar'
 import Home from './Home'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
 import getHelp from '../components/GetHelp'
-import Welcome from '../components/Welcome'
 
 const App = () => (
       <div className="App">
