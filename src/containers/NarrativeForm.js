@@ -4,9 +4,6 @@ import {updateNarrativeFormData} from '../actions/narrativeForm'
 import {createNarrative} from '../actions/narratives'
 import Button from '@material-ui/core/Button';
 
-
-
-
 class NarrativeForm extends Component {
 
   handleOnChange = event => {
@@ -17,11 +14,8 @@ class NarrativeForm extends Component {
     this.props.updateNarrativeFormData(currentNarrativeFormData)
   }
 
-
   handleOnSubmit = event => {
-    console.log("This has been cliked")
     event.preventDefault()
-
     this.props.createNarrative(this.props.narrativeFormData)
     .then(this.props.resetNarrativeForm)
   }
