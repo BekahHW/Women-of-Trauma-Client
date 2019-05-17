@@ -4,3 +4,9 @@ export const updateNarrativeFormData = narrativeFormData => {
     narrativeFormData
   }
 }
+
+export const resetNarrativeForm = () => {
+  return {
+    type: 'RESET_NARRATIVE_FORM'
+  }
+}

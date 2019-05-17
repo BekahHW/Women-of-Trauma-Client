@@ -1,3 +1,5 @@
+import { resetNarrativeForm } from './narrativeForm'
+
 const API_URL = process.env.REACT_APP_API_URL;
 
 const setNarratives = narratives => {
@@ -34,7 +36,10 @@ export const createNarrative = narrative => {
       body: JSON.stringify({narrative: narrative})
     })
     .then(response => response.json())
-    .then(narrative => dispatch(addNarrative(narrative)))
+    .then(narrative => {
+      dispatch(addNarrative(narrative))
+      dispatch(resetNarrativeForm())
+    })
     .catch(error => console.log(error))
   }
 }

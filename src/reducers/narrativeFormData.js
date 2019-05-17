@@ -1,13 +1,18 @@
-export default(state= {
+const initialState = {
   title: '',
   tagline: '',
   story: '',
   trauma: '',
-}, action) => {
+}
+
+export default(state = initialState, action ) => {
    switch(action.type) {
      case 'UPDATED_DATA':
       return action.narrativeFormData
 
-      default: return state
+     case 'RESET_NARRATIVE_FORM':
+      return initialState;
+
+      default: return state;
    }
 }
