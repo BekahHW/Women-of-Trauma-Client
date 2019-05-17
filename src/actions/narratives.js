@@ -9,7 +9,7 @@ const setNarratives = narratives => {
 
 const addNarrative = narrative => {
   return {
-    type: 'CREATE_NARRATIVES_SUCCESS',
+    type: 'CREATE_NARRATIVE_SUCCESS',
     narrative
   }
 }
