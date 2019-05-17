@@ -12,7 +12,6 @@ const Welcome = () => (
       <Carousel
         autoPlay={5000}
         animationSpeed={2000}
-        infinite
         arrows infinite>
         <h1> Approximately one half of all individuals will be exposed to at least one traumatic event in their lifetime. </h1>
         <h1> Research indicates that women are twice as likely to develop PTSD, experience a longer duration of posttraumatic symptoms and display more sensitivity to stimuli that remind them of the trauma. </h1>
