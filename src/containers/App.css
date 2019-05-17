@@ -45,6 +45,11 @@
   background-color: #000000;
 }
 
+.banner p {
+    color: white;
+    font-style: italic
+}
+
 
 
 @keyframes App-logo-spin {
