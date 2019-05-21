@@ -35,6 +35,7 @@ class NarrativeForm extends Component {
             value={title}
             />
           </div>
+        < br/>
           <div>
             <label htmlform="tagline">Tagline</label>
             <input
@@ -44,15 +45,18 @@ class NarrativeForm extends Component {
               value={tagline}
               />
             </div>
+            < br/>
             <div>
               <label htmlform="story">Story</label>
-              <input
+              <textarea
                 type="text"
                   onChange = {this.handleOnChange}
                 name="story"
                 value={story}
                 />
             </div>
+            < br/>
+
             <div>
         <label>
         Choose the type of trauma you most closely associate with:
