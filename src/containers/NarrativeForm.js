@@ -27,7 +27,7 @@ class NarrativeForm extends Component {
       Add Your Story
       <form onSubmit= {this.handleOnSubmit}>
         <div key={this.id}>
-          <label htmlform="title">Title</label>
+          <label htmlFor="title">Title</label>
           <input
             type="string"
             onChange = {this.handleOnChange}
@@ -36,7 +36,7 @@ class NarrativeForm extends Component {
             />
           </div>
           <div>
-            <label htmlform="tagline">Tagline</label>
+            <label htmlFor="tagline">Tagline</label>
             <input
               type="string"
               onChange = {this.handleOnChange}
@@ -45,7 +45,7 @@ class NarrativeForm extends Component {
               />
             </div>
             <div>
-              <label htmlform="story">Story</label>
+              <label htmlFor="story">Story</label>
               <input
                 type="text"
                   onChange = {this.handleOnChange}
@@ -94,3 +94,4 @@ const mapStateToProps = (state) => {
 export default connect(mapStateToProps,
   { updateNarrativeFormData,
    createNarrative})(NarrativeForm)
+
