@@ -1,4 +1,6 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Women of trauma was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+
+This app was created to help women who have been through trauma to find community and resources.
 
 ## Available Scripts
 
