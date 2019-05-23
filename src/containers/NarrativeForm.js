@@ -23,8 +23,8 @@ class NarrativeForm extends Component {
     const {title, tagline, story, trauma} = this.props.narrativeFormData
 
     return (
-      <div>
-      Add Your Story
+      <div className="NarForm">
+      <h2>Add Your Story</h2>
       <form onSubmit= {this.handleOnSubmit}>
         <div key={this.id}>
           <label htmlform="title">Title</label>
@@ -76,7 +76,7 @@ class NarrativeForm extends Component {
         </label>
 
             </div>
-
+            < br/>
 
              <Button type="submit" variant="contained" color="primary">
                   Add Story
