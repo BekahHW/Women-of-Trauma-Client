@@ -4,7 +4,8 @@ const pStyle = {
   fontSize: '2em',
   textAlign: 'center',
   color: 'white',
-  background: 'blue'
+  background: '#32353D',
+  padding: '65px'
 };
 
 const MainQuote = () => (
