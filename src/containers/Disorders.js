@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DisorderCard from '../components/DisorderCard'
 import { getDisorders} from '../actions/disorders'
+import Comment from './Comment'
 
 class Disorders extends Component {
 
@@ -14,11 +15,14 @@ class Disorders extends Component {
   render(){
     return (
       <div className="App-header">
+          < Comment />
       <h1>Disorders</h1>
 
       {this.props.disorders.map(disorder =>
         < DisorderCard key={disorder.id} disorder={disorder} />
-      )}
+
+    )}
+
       </div>
     )
   }

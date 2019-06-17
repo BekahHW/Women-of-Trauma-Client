@@ -6,6 +6,7 @@ import Home from '../components/Home'
 import Disorders from './Disorders'
 import Narratives from './Narratives'
 import getHelp from '../components/GetHelp'
+import loginForm from './LoginForm'
 
 const App = () => (
       <div className="App">
@@ -18,6 +19,8 @@ const App = () => (
         <Route exact path="/disorders" component={Disorders} />
         <Route exact path="/narratives" component={Narratives} />
         <Route exact path="/getHelp" component={getHelp} />
+        <Route exact path="/loginForm" component={loginForm} />
+
 
         </React.Fragment>
         </Router>

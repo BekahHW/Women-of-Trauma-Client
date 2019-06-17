@@ -16,8 +16,10 @@ class NarrativeForm extends Component {
 
   handleOnSubmit = event => {
     event.preventDefault()
+    console.log('A');
     this.props.createNarrative(this.props.narrativeFormData)
     .then(this.props.resetNarrativeForm)
+    console.log('B');
   }
   render () {
     const {title, tagline, story, trauma} = this.props.narrativeFormData

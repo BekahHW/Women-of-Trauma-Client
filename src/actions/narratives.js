@@ -27,6 +27,7 @@ export const getNarratives = () => {
 }
 
 export const createNarrative = narrative => {
+  console.log('C');
   return dispatch  => {
     return fetch(`${API_URL}/narratives`, {
       method: 'POST',
@@ -37,9 +38,11 @@ export const createNarrative = narrative => {
     })
     .then(response => response.json())
     .then(narrative => {
+      console.log('D');
       dispatch(addNarrative(narrative))
       dispatch(resetNarrativeForm())
     })
     .catch(error => console.log(error))
   }
+  console.log('E');
 }
