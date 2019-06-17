@@ -1,8 +1,7 @@
 import React, { Component } from 'react'
 import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
-
-
+import TextField from '@material-ui/core/TextField';
 
 class LoginForm extends Component {
 
@@ -26,8 +25,6 @@ class LoginForm extends Component {
 
 
 
-
-
   handleOnSubmit = event => {
     event.preventDefault()
     console.log('A');
@@ -41,54 +38,60 @@ class LoginForm extends Component {
     return (
       <div className="LoginForm">
         <h2>Signup or Login</h2>
-        <FormControl onSubmit={this.handleOnSubmit}>
+        <FormControl onSubmit={this.handleOnSubmit} >
           <div key={this.id}>
-            <label htmlform="first_name">First Name</label>
-            <input
+            {/* <label htmlFor="first_name">First Name</label> */}
+            <TextField
               type="string"
               onChange={this.handleOnChange}
               name="first_name"
               value={first_name}
+              id="standard-name"
+              label="First Name"
+              margin="normal"
             />
           </div>
           < br />
           <div>
-          <label htmlform="last_name">Last Name</label>
-          <input
+          {/* <label htmlform="last_name">Last Name</label> */}
+            <TextField
             type="string"
             onChange={this.handleOnChange}
             name="last_name"
             value={last_name}
+            label="Last Name"
           />
           </div>
         < br />
           <div>
-            <label htmlform="username">Username</label>
-            <input
+            <TextField
               type="string"
               onChange={this.handleOnChange}
               name="username"
               value={username}
+              label="Username"
             />
           </div>
           < br />
             <div>
-            <label htmlform="email">Email</label>
-            <input
-              type="string"
+            <TextField
+              type="email"
               onChange={this.handleOnChange}
               name="email"
               value={email}
+              label="Email"
+              autoComplete="email"
+
             />
           </div>
           < br />    
           <div>
-            <label htmlform="password">Password</label>
-            <input
-              type="string"
+            <TextField
               onChange={this.handleOnChange}
               name="password"
               value={password}
+              label="Password"
+              type="password"
             />
           </div>
           < br />
@@ -111,4 +114,7 @@ class LoginForm extends Component {
 //     narrativeFormData: state.narrativeFormData,
 //   })
 // }
-export default LoginForm
+// export default (withStyles(styles),
+  // withTheme)(LoginForm)
+
+export default (LoginForm)
