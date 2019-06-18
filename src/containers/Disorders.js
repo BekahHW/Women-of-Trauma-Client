@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import DisorderCard from '../components/DisorderCard'
 import { getDisorders} from '../actions/disorders'
-import Comment from './Comment'
+// import Comment from './Comment'
 
 class Disorders extends Component {
 
