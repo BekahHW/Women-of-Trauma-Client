@@ -37,7 +37,7 @@ class TreatmentForm extends Component {
 
     return (
       <div className="LoginForm">
-        <h2>Signup or Login</h2>
+        <h2>Treatment</h2>
         <FormControl onSubmit={this.handleOnSubmit} >
           <div key={this.id}>
             <TextField

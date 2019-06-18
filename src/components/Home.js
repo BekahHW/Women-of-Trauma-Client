@@ -2,7 +2,7 @@ import React from 'react';
 import Welcome from '../components/Welcome'
 import Banner from '../components/Banner'
 import MainQuote from '../components/MainQuote'
-import NarrativeCard from '../components/NarrativeCard'
+// import NarrativeCard from '../components/NarrativeCard'
 
 
 
