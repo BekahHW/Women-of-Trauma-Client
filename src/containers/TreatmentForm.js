@@ -84,8 +84,8 @@ class TreatmentForm extends Component {
           <div>
             <TextField
               onChange={this.handleOnChange}
-              name="Comments"
-              value={Comments}
+              name="comments"
+              value={comments}
               label="Comments"
               type="string"
             />
