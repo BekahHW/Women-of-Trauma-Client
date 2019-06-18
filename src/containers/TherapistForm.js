@@ -3,16 +3,15 @@ import Button from '@material-ui/core/Button';
 import FormControl from '@material-ui/core/FormControl';
 import TextField from '@material-ui/core/TextField';
 
-class TreatmentForm extends Component {
+class TherapistForm extends Component {
 
   constructor(props) {
     super(props);
     this.state = {
-      medication_name: '',
-      medication_dosage: '',
-      medication_side_effects: '',
-      therapy_type: '',
-      comments: ''
+      therapist_name: '',
+      therapist_location: '',
+      therapist_rating: '',
+      therapist_comments: ''
     }
   }
 
@@ -24,7 +23,6 @@ class TreatmentForm extends Component {
   }
 
 
-
   handleOnSubmit = event => {
     event.preventDefault()
     console.log('A');
@@ -33,19 +31,19 @@ class TreatmentForm extends Component {
     console.log('B');
   }
   render() {
-    const { medication_name, medication_dosage, medication_side_effects, therapy_type, comments} = this.state
+    const { therapist_name, therapist_location, therapist_rating, therapist_comments} = this.state
 
     return (
       <div className="LoginForm">
-        <h2>Treatment</h2>
+        <h2>Therapist</h2>
         <FormControl onSubmit={this.handleOnSubmit} >
           <div key={this.id}>
             <TextField
               type="string"
               onChange={this.handleOnChange}
-              name="medication_name"
-              value={medication_name}
-              label="Medication Name"
+              name="therapist_name"
+              value={therapist_name}
+              label="Therapist Name"
               margin="normal"
             />
           </div>
@@ -54,9 +52,9 @@ class TreatmentForm extends Component {
             <TextField
               type="string"
               onChange={this.handleOnChange}
-              name="medication_dosage"
-              value={medication_dosage}
-              label="Medication Dosage"
+              name="therapist_location"
+              value={therapist_location}
+              label="Therapist Location"
             />
           </div>
           < br />
@@ -64,29 +62,19 @@ class TreatmentForm extends Component {
             <TextField
               type="string"
               onChange={this.handleOnChange}
-              name="medication_side_effects"
-              value={medication_side_effects}
-              label="Side Effects"
+              name="therapist_rating"
+              value={therapist_rating}
+              label="Therapist Rating"
             />
           </div>
           < br />
           <div>
             <TextField
-              type="string"
+              type="text"
               onChange={this.handleOnChange}
-              name="therapy_type"
-              value={therapy_type}
-              label="Therapy Type"
-            />
-          </div>
-          < br />
-          <div>
-            <TextField
-              onChange={this.handleOnChange}
-              name="comments"
-              value={comments}
+              name="therapist_comments"
+              value={therapist_comments}
               label="Comments"
-              type="string"
             />
           </div>
           < br />
