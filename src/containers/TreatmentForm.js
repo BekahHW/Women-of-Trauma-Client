@@ -44,8 +44,7 @@ class TreatmentForm extends Component {
               type="string"
               onChange={this.handleOnChange}
               name="medication_name"
-              value={medication_name
-              id="standard-name"
+              value={medication_name}
               label="Medication Name"
               margin="normal"
             />
@@ -105,12 +104,4 @@ class TreatmentForm extends Component {
 
 
 
-// const mapStateToProps = (state) => {
-//   return ({
-//     narrativeFormData: state.narrativeFormData,
-//   })
-// }
-// export default (withStyles(styles),
-// withTheme)(LoginForm)
-
-export default (LoginForm)
+export default (TreatmentForm)
