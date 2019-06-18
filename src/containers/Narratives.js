@@ -17,7 +17,7 @@ class Narratives extends Component{
       <div className='NarrativeCard'>
         < NarrativeForm />
         <h1>Narratives</h1>
-        {this.props.narratives.map(narrative => <NarrativeCard key={narrative.id} narrative={narrative} />)}
+        {this.props.narratives.map(narrative => <NarrativeCard key={narrative.id} narrative={narrative} /> )}
       </div>
     )
   }
